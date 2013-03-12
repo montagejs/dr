@@ -1,12 +1,12 @@
 {
-    "name": "dr",
-    "version": "0.12.0",
-    "description": "A CommonJS module dependency analyzer for Montage",
-    "main": "dr",
-    "dependencies": {
-        "mr": "~0.12.8"
-    },
-    "bin": {
-        "dr": "analyze.js"
-    }
+  "name": "dr",
+  "version": "0.12.1",
+  "description": "A CommonJS module dependency analyzer for Montage",
+  "main": "dr",
+  "dependencies": {
+    "mr": "~0.12.8"
+  },
+  "bin": {
+    "dr": "analyze.js"
+  }
 }
