@@ -49,7 +49,9 @@ function tree(module, packageRequire, write, visited) {
     }
     */
 
-    if (module.mappingRedirect) {
+    if (module.error) {
+        write(JSON.stringify(module.id) + " - " + module.error.message);
+    } else if (module.mappingRedirect) {
         write(JSON.stringify(module.id) + " to " + JSON.stringify(module.mappingRedirect) + " in " + JSON.stringify(module.mappingRequire.config.name));
         var redirect = module.mappingRequire.getModuleDescriptor(module.mappingRedirect);
         tree(redirect, module.mappingRequire, writer("", write), visited);
